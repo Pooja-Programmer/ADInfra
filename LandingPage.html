@@ -3,7 +3,7 @@
   <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-         <link rel="stylesheet" type="text/css" href="Style.css" media="screen">
+       <link rel="stylesheet" type="text/css" href="React.css" media="screen">
 
   <body>
   
@@ -12,7 +12,46 @@
     <script type="text/babel">
       class Home extends React.Component {
         render() {
-          return <h1>Stay Home We'll Deliver</h1>
+          return (
+          <div>
+            <div className="logo">
+              <img className="logoimg" src="https://cdn.pixabay.com/photo/2020/04/14/18/55/market-5043916_1280.png" />
+              <p>Fresh Grocery</p>
+              <p>Stay Home, Stay Safe</p>
+            </div>
+            <div className="login">
+              <button>Login</button>
+              <button>Sign up</button>
+            </div>
+            <div className="home">
+             <h1>Stay Home We'll Deliver</h1>
+             <p>Get Your Groceries delivered in less than an hour</p>
+              <div class="search-container">
+               <form action="/action_page.php">
+                   <input type="text" placeholder="Search.." name="search" />
+                   <button type="submit">Search</button>
+               </form>
+               </div>
+               <div class="locations">
+                 <li>New York</li>
+                 <li>Los Angels</li>
+                 <li>Chicago</li>
+                 <li>Houston</li>
+                 <li>Phoenix</li>
+                 <li>Philadelphia</li>
+                 <li>San Antanio</li>
+               </div>
+              </div>
+              <Features />
+             </div>
+          )
+        }
+      }
+      class Features extends React.Component {
+        render(){
+            return (
+                <img className="delimg" src ="https://cdn.pixabay.com/photo/2020/08/28/14/45/courier-5524778_1280.png" />
+            )
         }
       }
 
