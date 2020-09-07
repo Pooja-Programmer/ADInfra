@@ -1,1 +1,27 @@
 
+.logo{
+  float:left;
+  
+}
+
+.logoimg{
+  width: 100px;
+height: 80px;
+}
+.login{
+  float:right;
+}
+
+.home{
+  clear:left;
+  text-align:center;
+}
+.locations li{
+  display:inline-block;
+    padding: 14px 16px;
+
+}
+.delimg{
+  width: 500px;
+height: 480px;
+}
