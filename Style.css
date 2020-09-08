@@ -495,4 +495,7 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
   #Footer .col{
     text-align:left;
   }
+  #Final{
+    padding-top:10px;
+  }
 }
