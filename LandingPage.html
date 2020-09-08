@@ -3,6 +3,13 @@
   <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
        <link rel="stylesheet" type="text/css" href="Style.css" media="screen">
 
   <body>
@@ -11,25 +18,34 @@
 
     <script type="text/babel">
       class Home extends React.Component {
+      
+
         render() {
+        
           return (
           <div>
+            <div id="header">
             <div className="logo">
               <img className="logoimg" src="https://cdn.pixabay.com/photo/2020/04/14/18/55/market-5043916_1280.png" />
-              <p>Fresh Grocery</p>
-              <p>Stay Home, Stay Safe</p>
+              <div class="logodesc">
+                 <p><span id="logtitle">Fresh Grocery</span><br />
+              Stay Home, Stay Safe</p>
+              </div>              
             </div>
-            <div className="login">
-              <button>Login</button>
-              <button>Sign up</button>
+            <div id="login">
+              <button class="log">Login</button>
+              <button class="sign">Sign up</button>
             </div>
+            <span class="sn" >&#9776;</span>
             <div className="home">
              <h1>Stay Home We'll Deliver</h1>
              <p>Get Your Groceries delivered in less than an hour</p>
               <div class="search-container">
                <form action="/action_page.php">
-                   <input type="text" placeholder="Search.." name="search" />
-                   <button type="submit">Search</button>
+                   <i class="material-icons icon">place</i>
+                   <input type="text" placeholder="Search for a location" name="search" />
+                   <i class="material-icons icon">my_location</i>
+                   <button class="sign wid" type="submit">Search</button>
                </form>
                </div>
                <div class="locations">
@@ -42,7 +58,13 @@
                  <li>San Antanio</li>
                </div>
               </div>
+              </div>
               <Features />
+              <Searches />
+              <Steps />
+              <Reason  />
+              <Final />
+              <Footer />
              </div>
           )
         }
@@ -50,11 +72,215 @@
       class Features extends React.Component {
         render(){
             return (
+              <div id="features">
+                <div className="desc">
+                  <p>#GroceryDeliveredSafely</p>
+                  <h2>Hygenically <br />
+                    Packed,<br />
+                    Safely Delivered</h2>
+                  <button class="sign">Learn More</button>
+                </div>
                 <img className="delimg" src ="https://cdn.pixabay.com/photo/2020/08/28/14/45/courier-5524778_1280.png" />
+                <div className="featlist">
+                   <li><i class="fa tick">&#xf058;</i> <br />Zero touch delivery<br /> options</li>
+                   <li><i class="fa tick">&#xf058;</i> <br />Regular cleaning of <br />warehouses</li>
+                   <li><i class="fa tick">&#xf058;</i> <br />Fever screening of all <br /> executives</li>
+                </div>
+              </div>
             )
         }
       }
+      class Searches extends React.Component{
+         render(){
+           return (
+             <div id="Searches">
+                 <p>Here’s what you need</p>
+                 <h2>Quick Searches</h2>
+                 <div class="row">
+                 <div class="column">
+                  <div class="card">
+                   <img src ="https://cdn.pixabay.com/photo/2020/04/14/18/54/market-5043903_960_720.png" />
+                   <p>Grocery & Staples</p>
+                  </div>
+                 </div>
+                 <div class="column">
+                  <div class="card">
+                   <img src ="https://cdn.pixabay.com/photo/2013/07/13/01/22/fruits-155616_1280.png" />
+                   <p>Vegetables & Fruits</p>
+                  </div>
+                 </div>
+                 <div class="column">
+                  <div class="card">
+                   <img src ="https://cdn.pixabay.com/photo/2020/07/19/06/07/hand-sanitizer-5419052_960_720.png" />
+                   <p>Personal Care</p>
+                  </div>
+                 </div>
+                 <div class="column">
+                  <div class="card">
+                   <img src ="https://cdn.pixabay.com/photo/2013/07/12/13/18/scales-146789_960_720.png" />
+                   <p>Home & Kitchen</p>
+                  </div>
+                 </div>
+                 <div class="column">
+                  <div class="card">
+                   <img src ="https://cdn.pixabay.com/photo/2014/12/21/23/28/soda-575433_960_720.png" />
+                   <p>Beverages</p>
+                  </div>
+                 </div>
+                 </div>
+                 <button class="sign">Explore More</button>
+             </div>
+             )
+         }
+      }
+      
+      class Steps extends React.Component {
+        render(){
 
+            return (
+              <div id="Steps">
+                <div className="container">
+                <p class="lightgrey">Get delivered in 3 easy steps</p>
+                   <h2>Here’s how it works</h2> 
+                   <img className="stepimg" src="https://cdn.pixabay.com/photo/2017/01/31/17/00/buy-2025564_960_720.png" />
+                    <h3><span class="num">1</span>Request in the app</h3>
+                     <p>Set your delivery location, Choose your groceries from a wide range of 5000+ products.</p>
+                   
+                                    <button class="sign">App Store</button>
+                                    <button class="sign">Google Play</button>
+                </div>
+                <div className="container">
+                  
+                <img className="step1img" src ="https://cdn.pixabay.com/photo/2018/10/05/22/24/money-3726984_960_720.png" />   
+                <div className="desc1">
+                    <h3><span class="num">2</span>Schedule and Pay</h3>
+                    <p>Schedule the delivery at your convenient time <br /> and pay digitally</p>
+                </div>
+                </div>
+                
+                <div className="container">
+                                                 <img className="step2img" src ="https://cdn.pixabay.com/photo/2017/09/29/23/44/feedback-2800867_1280.png" />  
+ 
+                <div className="desc2">
+                    <h3><span class="num">3</span>It’s delivered and Rate us</h3>
+                    <p>Collect groceries at your doorstep and tell us about<br /> our service</p>
+                </div>
+
+                </div>
+                
+              </div>
+            )
+        }
+      }
+      class Reason extends React.Component {
+        render(){
+            return (
+              <div id="Reason">
+                
+                 <p>Why Choose Fresh Grocery</p>
+                 <h2>Because we are in it together</h2>
+                 <div class="col">
+                   <img class="resimg" src="https://cdn.pixabay.com/photo/2017/10/18/14/31/box-2864335_1280.png" />
+                     <h3>No Minimum Order</h3>
+                    <p>No order value restrictions,<br /> Order for yourself or your group</p>
+                 </div>
+                 <div class="col">
+                   <img class="resimg" src="https://cdn.pixabay.com/photo/2017/10/18/14/31/box-2864327_1280.png" />
+                     <h3>Live Order Tracking</h3>
+                    <p>Track your order anytime from <br />the store to your doorstep</p>
+                 </div>
+                 <div class="col">
+                   <img class="resimg" src="https://cdn.pixabay.com/photo/2017/10/18/14/30/box-2864321_1280.png" />
+                     <h3>24 x 7 delivery</h3>
+                    <p>Order anytime, anywhere. We <br />will get you delivered</p>
+                 </div>
+                 <div class="partner">
+                 <div class="partnerimg">
+                    <img class="tlimg" src="./images/topleft.png" />
+
+                   <img class="roundimg" src="./images/center.png" />
+                  <img class="trimg" src="./images/topright.png" />
+
+
+                   </div>
+
+                   <div class="partnerdesc">
+                    <h3>Become a Partner and<br />start earning!</h3>
+                    <p>You can login and logout whenever you want!<br />No mandatory timings!</p>
+                    <button class="sign">Become a Partner</button>
+                   </div>
+                                                                            <img class="bottom" src="./images/bottom.png" />
+
+
+                 </div>
+              </div>
+            )
+        }
+      }
+      class Final extends React.Component {
+        render(){
+            return (
+              <div id="Final">
+                 <div class="finalcol">
+                     <div class="finallogo">
+                        <img className="logoimg" src="https://cdn.pixabay.com/photo/2020/04/14/18/55/market-5043916_1280.png" />
+              <div class="finallogodesc">
+                 <p><span id="logtitle">Fresh Grocery</span><br />
+              Stay Home, Stay Safe</p>
+              </div>     
+                     </div>
+                    
+                     <div class="help">
+                     <p>Help Center</p>
+                     <p>English (International)  </p>
+                    </div>
+                   <button class="sign">Apple Store</button>
+                   <button class="sign">GooglePlay</button>
+
+                  </div>
+            <div class="finalcol">
+               <h5>About us</h5>
+               <p>My Account</p>
+               <p>Categories</p>
+               <p>Cities</p>
+               <p>Become a Partner</p>
+               <p>Blog</p>
+               <p>Careers</p>
+            </div>
+            <div class="finalcol faq">
+               <h5>Questions?</h5>
+               <p>Frequently Asked Questions</p>
+               <p>Contact Us</p>               
+            </div>
+                  
+                
+              </div>
+            )
+        }
+      }
+      class Footer extends React.Component {
+        render(){
+            return (
+              <div id="Footer">
+              <div class="col">
+                 <p>© 2020 Appening Infotech Pvt Ltd</p>                
+               </div> 
+              <div class="col">
+                 <li>Privacy</li>
+                <li>Accessibility</li>
+                <li>Terms</li>
+               </div> 
+               <div class="col">
+                 <a href="#" class="fa fa-instagram"></a>
+                 <a href="#" class="fa fa-facebook"></a>
+                 <a href="#" class="fa fa-twitter"></a>
+                 <a href="#" class="fa fa-youtube"></a>
+
+               </div> 
+              </div>
+            )
+        }
+      }
       ReactDOM.render(<Home />, document.getElementById('mydiv'))
     </script>
   </body>
