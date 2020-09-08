@@ -1,9 +1,8 @@
-
 body{
     font-family:'Poppins';
-margin:0;
-}
+  width:100%;
 
+}
 
 #header{
   background-color: #f7d8a0;
@@ -187,22 +186,26 @@ h2{
   #features{
     padding:0px;
   }
-  .desc,.delimg{
+  .desc{
     
-    padding: 10px;
+    padding: 0px;
+    padding-bottom:30px;
     width: 100%;
     text-align: center;
   
   }
   .delimg{
     margin:auto;
-    width:450px;
+    padding-right:30px;
     
   }
   .featlist{
     display:block;
     clear:both;
   }
+  .featlist li {
+   padding-bottom: 36px;
+}
 }
 
 #Searches,#Reason,#Steps{
@@ -298,11 +301,12 @@ font-weight:bold;
 }
 
 @media screen and (max-width: 700px) {
-  .step1img,.step2img,.desc1,.desc2{
+  .stepimg,.step1img,.step2img,.desc1,.desc2{
     width:90%;
     float:none;
     padding:0px;
-    padding-top:10px;
+    padding-top:30px;
+    padding-bottom:30px;
   }
   
 }
@@ -484,6 +488,11 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
     width:100%;
     clear:both;
     float:none;
-    padding-left:60px;
+  }
+  .col li{
+    display:block;
+  }
+  #Footer .col{
+    text-align:left;
   }
 }
